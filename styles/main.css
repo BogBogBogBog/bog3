@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: "Kanit", sans-serif;
+    list-style: none;
+    /* border: 1px solid aliceblue; */
+}
+
+body {
+    background-image: url(../public/assets/legendmc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 1200px;
+    max-height: 100%;
+    margin: 0 auto;
+
+}
+
+
+.bgcolor {
+    background-color: #15532a;
+}
+
+/* header */
+
+header {
+    overflow: hidden;
+}
+
+.banner {
+    margin: auto;
+    padding: 0;
+    min-width: fit-content;
+    min-height: fit-content;
+}
+
+.banner img {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+nav {
+    background-image: url(../public/assets/Minecraft480E2.png);
+    height: 480px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+label.logotxt {
+    font-size: 28px;
+    line-height: 80px;
+    margin-left: 10%;
+    font-weight: bold;
+    color: aliceblue;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 400px;
+}
+
+label.logoimg {
+    line-height: 80px;
+    margin: 0px 10%;
+    cursor: pointer;
+}
+
+nav ul {
+    float: right;
+    margin-right: 10%;
+    margin-top: 400px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    font-size: 18px;
+    color: aliceblue;
+    padding: 10px 13px;
+    border: 2px solid aliceblue;
+    border-radius: 5px;
+    background-color: #1b7621;
+    font-weight: bolder;
+}
+
+a.active,nav a:hover {
+    transition: 0.2s ease 0s;
+    background-color: aliceblue;
+    color: #1b7621;
+    font-weight: bolder;
+}
+
+a.about {
+    color: #1b7621;
+    border: 2px solid aliceblue;
+    background-color:aliceblue;
+    font-weight: bolder;
+    margin-left: 40px;
+}
+
+/* main */
+
+main {
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 900px 300px;
+    grid-template-areas: 
+    "context sidebar";
+}
+
+.aside-title {
+    font-size: 22px;
+    font-weight: bolder;
+    margin: 20px 0;
+}
+
+div.aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: fit-content;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.context {
+    display: block;
+    font-size: 20px;
+    margin: 20px auto;
+    font-weight: normal;
+    width: 95%;
+}
+
+aside {
+    padding: 35px;
+    grid-area: sidebar;
+    display: grid;
+    grid-template-rows: 50px;
+    justify-content: center;
+    background-color: #15632f;
+}
+
+section {
+    padding: 35px 0;
+    grid-area: context;
+    gap: 20px;
+}
+
+.nax {
+    margin: auto;
+    height: 100%;
+}
+
+.nax img {
+    width: 85%;
+    padding-block: 25px;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+iframe {
+    margin: auto;
+    margin-block: 25px;
+}
+
+/* footer */
+
+footer {
+    background-color: #124724;
+    display: block;
+    clear: both;
+    text-align: center;
+    height: 200px;
+}
+
+/* responsive not done yet*/
+@media screen and (max-width: 600px) {
+
+    .banner img {
+        height: auto; /* Adjust banner height for mobile */
+    }
+
+    nav {
+        height: auto; /* Adjust navbar height for mobile */
+        padding: 20px; /* Adjust padding */
+    }
+    
+    nav ul {
+        float: none; /* Remove float */
+        margin-right: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline-block; /* Stack list items vertically */
+        margin: 0px 0;
+        line-height: auto;
+    }
+
+    nav ul li a {
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+
+    .context {
+        font-size: 8px; /* Adjust font size */
+    }
+
+    aside {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .aside {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px; /* Adjust font size */
+        padding: auto;
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+
+    .section {
+        font-size: 12px; /* Adjust font size */
+    }
+
+    a.about {
+        display: inline;
+        margin: 0;
+    }
+
+    label.logotxt {
+        display: block;
+        margin: auto;
+        text-align: center;
+        border-bottom: 2px solid aliceblue;
+    }
+
+    .nax img {
+        display: block;
+        padding: 25px 0;
+    }
+
+    main {
+        margin-inline: 3% ;
+        margin-top: 5%;
+        padding-top: 30px; /* Adjust padding */
+        display: block;
+    }
+
+    .divider {
+        display: none; /* Hide divider */
+    }
+
+    .nax img {
+        width: 50%; /* Make images responsive */
+    }
+}
